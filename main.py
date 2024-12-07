@@ -1,7 +1,7 @@
-from PyQt5 import uic
-from PyQt5.QtWidgets import QApplication, QMainWindow
-from PyQt5.QtWidgets import QPushButton
-from PyQt5.QtGui import QPainter, QColor, QPolygon
+from PyQt6 import uic
+from PyQt6.QtWidgets import QApplication, QMainWindow
+from PyQt6.QtWidgets import QPushButton
+from PyQt6.QtGui import QPainter, QColor, QPolygon
 import sys
 import random
 
@@ -11,7 +11,7 @@ SCREEN_SIZE = [680, 480]
 class Example(QMainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi("D:/Ilya/Desktop/Илья/Пайтон/train/Git-yellow-circles/UI.ui", self)
+        uic.loadUi("UI.ui", self)
         self.flag = False
         self.setWindowTitle("Случайный круг")
         self.pushButton.clicked.connect(self.draw)
@@ -42,4 +42,4 @@ if __name__ == "__main__":
     app = QApplication(sys.argv)
     ex = Example()
     ex.show()
-    sys.exit(app.exec_())
+    sys.exit(app.exec())
